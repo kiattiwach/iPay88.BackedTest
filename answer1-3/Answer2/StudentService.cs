@@ -6,7 +6,7 @@ public class StudentService
     {
         new Student() { Id = 1, Name = "Ashley" },
         new Student() { Id = 2, Name = "Samantha" },
-        new Student() { Id = 3, Name = "Julia'" },
+        new Student() { Id = 3, Name = "Julia" },
         new Student() { Id = 4, Name = "Scarlet" },
     };
 
