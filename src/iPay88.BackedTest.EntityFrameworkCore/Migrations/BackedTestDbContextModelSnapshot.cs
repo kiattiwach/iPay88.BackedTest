@@ -24,6 +24,28 @@ namespace iPay88.BackedTest.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("iPay88.BackedTest.CreditCardDefinitions.CreditCardDefinition", b =>
+                {
+                    b.Property<string>("Bank")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CardType")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CardNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Logo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Bank", "CardType", "CardNo");
+
+                    b.HasIndex("CardNo")
+                        .IsUnique();
+
+                    b.ToTable("AppCreditCardDefinitions", (string)null);
+                });
+
             modelBuilder.Entity("Volo.Abp.AuditLogging.AuditLog", b =>
                 {
                     b.Property<Guid>("Id")

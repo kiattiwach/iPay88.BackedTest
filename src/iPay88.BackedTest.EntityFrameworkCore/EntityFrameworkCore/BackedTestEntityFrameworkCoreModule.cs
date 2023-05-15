@@ -1,4 +1,5 @@
 ﻿using System;
+using iPay88.BackedTest.CreditCardDefinitions;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Uow;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
@@ -41,6 +42,7 @@ public class BackedTestEntityFrameworkCoreModule : AbpModule
                 /* Remove "includeAllEntities: true" to create
                  * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
+            options.AddRepository<CreditCardDefinition, CreditCardDefinitionRepository>();
         });
 
         Configure<AbpDbContextOptions>(options =>

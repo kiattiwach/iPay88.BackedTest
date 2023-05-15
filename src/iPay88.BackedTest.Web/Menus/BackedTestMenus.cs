@@ -5,6 +5,5 @@ public class BackedTestMenus
     private const string Prefix = "BackedTest";
     public const string Home = Prefix + ".Home";
 
-    //Add your menu items here...
-
+    public const string CreditCardDefinition = Prefix + ".CreditCardDefinition";
 }

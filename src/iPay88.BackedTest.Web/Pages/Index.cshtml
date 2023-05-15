@@ -12,21 +12,89 @@
 <abp-script src="/Pages/Index.js" />
 }
 <div class="container">
-    <div class="p-5 text-center">
+    <div class="p-1 text-center">
         <div class="d-inline-block bg-success text-white p-1 h5 rounded mb-4 " role="alert">
             <h5 class="m-1"> <i class="fas fa-rocket"></i> Congratulations, <strong>BackedTest</strong> is successfully running!</h5>
         </div>
         <h1>Welcome to the Application</h1>
+        
+        <div class="card justify-content-start" style="border: 2px solid limegreen; border-radius: 25px;">
+            <div class="card-body d-flex flex-column gap-3">
+                <div class="d-flex flex-row justify-content-start align-items-end gap-2">
+                    <h3>Creator: </h3>
+                    <h4>Kiattiwat Katanyuchanon (kiattiwatt@hotmail.com)</h4>
+                </div>
+                <h3 style="font-weight: bold; color: springgreen">You can see source code for each answers in separate solution folders.</h3>
+                <div class="d-flex flex-row justify-content-start align-items-end  gap-2">
+                    <h4>Question #1</h4>
+                    <h5>Start ...\iPay88.BackedTest\answer1-3\Answer1\bin\Debug\net6.0\Answer1.exe</h5>
+                </div>
+                <img src="images/result/answer1.png" />
+            </div>
+        </div>
+        <div class="card justify-content-start" style="border: 2px solid limegreen; border-radius: 25px;">
+            <div class="card-body d-flex flex-column gap-3">
+                <div class="d-flex flex-row justify-content-start align-items-end gap-2">
+                    <h3>Creator: </h3>
+                    <h4>Kiattiwat Katanyuchanon (kiattiwatt@hotmail.com)</h4>
+                </div>
+                <div class="d-flex flex-row justify-content-start align-items-end  gap-2">
+                    <h4>Question #2</h4>
+                    <h5>Start ...\iPay88.BackedTest\answer1-3\Answer1\bin\Debug\net6.0\Answer2.exe</h5>
+                </div>
+                <img src="images/result/answer2.png" />
+            </div>
+        </div>
+        
+        <div class="card justify-content-start" style="border: 2px solid limegreen; border-radius: 25px;">
+            <div class="card-body d-flex flex-column  gap-3">
+                <div class="d-flex flex-row justify-content-start align-items-end gap-2">
+                    <h3>Creator: </h3>
+                    <h4>Kiattiwat Katanyuchanon (kiattiwatt@hotmail.com)</h4>
+                </div>
+                <div class="d-flex flex-row justify-content-start align-items-end  gap-2">
+                    <h4>Question #3</h4>
+                    <h5>Start ...\iPay88.BackedTest\answer1-3\Answer1\bin\Debug\net6.0\Answer3.exe</h5>
+                </div>
+                <img src="images/result/answer3.png" />
+            </div>
+        </div>
+        
+        <div class="card justify-content-start" style="border: 2px solid limegreen; border-radius: 25px;">
+            <div class="card-body d-flex flex-column  gap-3">
+                <div class="d-flex flex-row justify-content-start align-items-end gap-2">
+                    <h3>Creator: </h3>
+                    <h4>Kiattiwat Katanyuchanon (kiattiwatt@hotmail.com)</h4>
+                </div>
+                <div class="d-flex flex-column align-items-start gap-1">
+                    <h4>Question #4</h4>
+                    <h5 style="color: springgreen">Start web instance Instruction</h5>
+                    <p>- Open iPay88.BackedTest.sln with visual studio 2022</p>
+                    <p>- Start iPay88.BackedTest.DbMigrator -> To Create database</p>
+                    <p>- CMD at ...\iPay88.BackedTest\src\iPay88.BackedTest.Web\bin\Release\net6.0\publish</p>
+                    <p>- Start iPay88.BackedTest.Web.exe</p>
+                    <p>- Browse http://localhost:5000</p>
+                    <h5 style="color: springgreen">Debugging Instruction</h5>
+                    <p>- Open iPay88.BackedTest.sln with visual studio 2022</p>
+                    <p>- Start iPay88.BackedTest.DbMigrator -> To Create database</p>
+                    <p>- Start iPay88.BackedTest.Web -> To Start ASP .Net Core MVC</p>
+                    <p style="text-decoration: underline; font-style: italic; color: lightcoral">
+                        - If starting web is fail, try to CMD "abp install-libs" at ...\iPay88.BackedTest\src
+                    </p>
+                </div>
+                <img src="images/result/answer4.png" />
+            </div>
+        </div>
 
-        <p class="lead px-lg-5 mx-lg-5">@L["LongWelcomeMessage"]</p>
+        @*<p class="lead px-lg-5 mx-lg-5">@L["LongWelcomeMessage"]</p>
 
         @if (!CurrentUser.IsAuthenticated)
         {
             <a abp-button="Primary" href="~/Account/Login"><i class="fa fa-sign-in"></i> @L["Login"]</a>
-        }
+        }*@
 
     </div>
-    <div class="card">
+    @*<div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-auto text-center">
@@ -183,5 +251,5 @@
             <a href="https://twitter.com/abpcommercial" target="_blank" class="mx-2"><i class="fa fa-twitter"></i><span class="text-secondary"> Abp Commercial</span></a>
             <a href="https://github.com/abpframework/abp" target="_blank" class="mx-2"><i class="fa fa-github"></i><span class="text-secondary"> abpframework</span></a>
         </p>
-    </div>
+    </div>*@
 </div>

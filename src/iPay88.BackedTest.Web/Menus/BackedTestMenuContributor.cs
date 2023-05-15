@@ -34,6 +34,16 @@ public class BackedTestMenuContributor : IMenuContributor
             )
         );
 
+        context.Menu.Items.Add(
+            new ApplicationMenuItem(
+                BackedTestMenus.CreditCardDefinition,
+                l["Menu:CreditCardDefinition"],
+                "/CreditCardDefinitions",
+                icon: "fa fa-sd-card",
+                order: 1
+            )
+        );
+
         if (MultiTenancyConsts.IsEnabled)
         {
             administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);

@@ -13,5 +13,7 @@ class Program
                               $"{x.OccupationMap[OccupationConstant.Singer],-15}\t"+
                               $"{x.OccupationMap[OccupationConstant.Actor],-15}\t");
         });
+
+        Console.ReadLine();
     }
 }

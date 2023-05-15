@@ -9,5 +9,7 @@ class Program
         {
             Console.WriteLine(student);
         }
+
+        Console.ReadLine();
     }
 }

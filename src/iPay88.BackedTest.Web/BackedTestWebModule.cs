@@ -92,7 +92,7 @@ public class BackedTestWebModule : AbpModule
         ConfigureVirtualFileSystem(hostingEnvironment);
         ConfigureLocalizationServices();
         ConfigureNavigationServices();
-        ConfigureAutoApiControllers();
+        //ConfigureAutoApiControllers();
         ConfigureSwaggerServices(context.Services);
     }
     
@@ -150,10 +150,10 @@ public class BackedTestWebModule : AbpModule
     {
         Configure<AbpLocalizationOptions>(options =>
         {
-            options.Languages.Add(new LanguageInfo("ar", "ar", "العربية"));
-            options.Languages.Add(new LanguageInfo("cs", "cs", "Čeština"));
+            /*options.Languages.Add(new LanguageInfo("ar", "ar", "العربية"));
+            options.Languages.Add(new LanguageInfo("cs", "cs", "Čeština"));*/
             options.Languages.Add(new LanguageInfo("en", "en", "English"));
-            options.Languages.Add(new LanguageInfo("en-GB", "en-GB", "English (UK)"));
+            /*options.Languages.Add(new LanguageInfo("en-GB", "en-GB", "English (UK)"));
             options.Languages.Add(new LanguageInfo("hu", "hu", "Magyar"));
             options.Languages.Add(new LanguageInfo("fi", "fi", "Finnish"));
             options.Languages.Add(new LanguageInfo("fr", "fr", "Français"));
@@ -169,7 +169,7 @@ public class BackedTestWebModule : AbpModule
             options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "繁體中文"));
             options.Languages.Add(new LanguageInfo("de-DE", "de-DE", "Deutsch", "de"));
             options.Languages.Add(new LanguageInfo("es", "es", "Español"));
-            options.Languages.Add(new LanguageInfo("el", "el", "Ελληνικά"));
+            options.Languages.Add(new LanguageInfo("el", "el", "Ελληνικά"));*/
         });
     }
 

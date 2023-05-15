@@ -1,9 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using iPay88.BackedTest.CreditCardDefinitions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.EntityFrameworkCore;
@@ -75,11 +78,15 @@ public class BackedTestDbContext :
 
         /* Configure your own tables/entities inside here */
 
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(BackedTestConsts.DbTablePrefix + "YourEntities", BackedTestConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+        builder.Entity<CreditCardDefinition>(b =>
+        {
+            b.ToTable(BackedTestConsts.DbTablePrefix + "CreditCardDefinitions", BackedTestConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
+
+            b.HasIndex(x => x.CardNo).IsUnique();
+            b.HasKey(x => new { x.Bank, x.CardType, x.CardNo });
+
+            b.ApplyObjectExtensionMappings();
+        });
     }
 }
